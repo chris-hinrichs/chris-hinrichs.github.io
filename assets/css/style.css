@@ -1,0 +1,486 @@
+body, html {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    min-width: 960px;
+    -webkit-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+.page-wrapper {
+    -webkit-transition: .65s ease-in-out;
+}
+.container {
+    margin-bottom: 40px;
+    position: relative;
+    bottom: -20px;
+}
+
+.photo-title {
+    position:relative;
+    margin: 0 auto;
+    text-align: center;
+    width: 600px;
+    font-size: 250%;
+    color: #212121;
+}
+
+.photo-container img {
+    position: relative;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    border-radius: 50%;
+    width: 200px;
+    border: 1px solid #616161;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+    -webkit-transition: .3s ease-in-out;
+}
+
+.photo-container {
+    position:relative;
+    text-align: center;
+}
+
+.photo-subtext {
+    position: relative;
+    text-align: center;
+    font-size: 45%;
+    color: #616161;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.photo-container img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    -webkit-transition: .3s ease-in-out;
+}
+
+
+.about {
+    position:relative;
+    background-color: #F5F5F5;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    overflow: hidden;
+    padding-bottom: 2.5%;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+}
+
+.about-header {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    font-size: 40px;
+    color: #1976D2;
+}
+
+
+.about-button:active {
+    -webkit-box-shadow: none;
+    transition: 300ms;
+}
+
+.about-button:hover {
+    background-color: #BBDEFB;
+    transform: scale(1.05);
+    transition: 300ms;
+}
+
+.about-text {   
+    position:relative;
+    left: 0; 
+    right: 0; 
+    top: 0;
+    bottom: 0;
+    margin-left: 15%; 
+    font-size: 20px; 
+    width: 75%;
+    float:left;
+    color: #424242;
+}
+
+.about-button {
+    position: relative;
+    float:left;
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    font-size: 24px;
+    margin-top: 5%;
+    right: 100px;
+    margin-right: 2%;
+    margin-left: 80%;
+    border-radius: 5px;
+    background-color: #E3F2FD;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+    transition: 300ms;
+}
+
+#modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal-box {
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    background-color: #EEEEEE;
+    position: fixed;
+    top: calc(50% - 40%);
+    left: calc(50% - 40%);
+    z-index: 100;
+}
+
+#modal-box img {
+    border-radius: 50%;
+    width: 30%;
+    border: 1px solid #616161;
+    transition: 200ms;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+    position: relative;
+    top: 1%;
+    right: -3%;
+}
+
+#modal-box img:hover {
+    transform: scale(1.05);
+}
+
+#modal-box div {
+    position: relative;
+}
+
+
+#nav-toggle { 
+    position: absolute; 
+    left: 50%; top: 50%; 
+}
+
+#nav-toggle {
+    padding: 10px 30px 15px 0px; 
+}
+
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+    height: 2px;
+    width: 30px;
+    background: #2962FF;
+    position: absolute;
+    display: block;
+    content: '';
+    -webkit-transition: .65s ease-in-out;
+}
+
+.button-pressed {
+  -webkit-transform: rotate(90deg);
+}
+
+#nav-toggle span:before {
+    top: -10px; 
+}
+
+#nav-toggle span:after {
+    bottom: -10px;
+}
+
+/* FREEBIES */
+
+/* Styling the Sidebar Button */
+#sidebar-button {
+    position: fixed;
+    z-index: 100;
+    left: 15px;
+    top: 15px;
+    cursor: pointer;
+    -webkit-transition: .65s ease-in-out;
+}
+
+.sidebar-container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+
+}
+
+.sidebar-container ul li a:hover {
+    transition: .5s;
+    color: #2962FF;
+    text-shadow:0px 0px .5px #2962FF;
+    cursor: pointer;
+}
+
+.sidebar-container ul li a {
+    transition: .5s;
+    color: #424242;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sidebar-container {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background-color: #F5F5F5;
+    -webkit-transform: translateX(-150px);
+    -webkit-transition: .65s ease-in-out;
+}
+
+.sidebar-item {
+    font-weight: 700;
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: linear .2s;
+}
+
+.sidebar-item a {
+    text-decoration: none;
+}
+
+.wrapper-active, .button-active {
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    transform: translateX(150px);
+
+}
+
+.sidebar-active {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+}
+
+.section-container {
+    position:relative;
+    background-color: #F5F5F5;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    overflow: hidden;
+    padding-bottom: 2.5%;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+}
+
+.header {
+    position: relative;
+    margin-bottom: 15px;
+    color: #1976D2;
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 40px;
+}
+
+
+.education-text {   
+    position:relative;
+    left: 0; 
+    right: 0; 
+    top: 0;
+    bottom: 0;
+    margin-left: 5%; 
+    font-size: 24px; 
+    width: 100%;
+    color: #424242;
+}
+
+.education-college ul {
+    overflow: hidden;
+    float:left;
+    width:57%;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+#college  {
+    text-align: center;
+
+}
+
+#college-title {
+    color: #1976D2;
+    font-size: 110%;
+}
+#college-subtext {
+    font-size: 70%;
+
+}
+
+.education-college img {
+    float:left;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 5%;
+    width: 30%;
+    border: 1px solid #616161;
+    transition: 200ms;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+}
+
+#course-title {
+    color: #1976D2;
+    font-size: 110%;
+}
+
+.course-list {
+    margin-left: 5%;
+}
+
+.course-list a {
+    text-decoration: none;
+    font-size: 90%;
+    color: #424242;
+}
+
+.course-list a:hover {
+    color: #2962FF;
+    text-shadow:0px 0px .5px #424242;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.employment {
+    position:relative;
+    background-color: #F5F5F5;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    overflow: hidden;
+    padding-bottom: 2.5%;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+}
+
+#stroll-title a{
+    text-decoration: none;
+    color: #1976D2;
+    font-size: 110%;
+}
+
+
+
+#stroll-title:hover {
+    color: #2962FF;
+    text-shadow:0px 0px .5px #424242;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#stroll-subtext {
+    color: #616161;
+    font-size: 70%;
+}
+
+#stroll-info {
+    float: left;
+    width: 50%;
+    margin-left: 7%;
+    margin-top: 2%;
+    font-size: 80%;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+#personal-title {
+    color: #1976D2;
+    font-size: 110%;
+}
+
+#personal-subtext a{
+    text-decoration: none;
+    color: #616161;
+    font-size: 70%;
+    transition: 200ms;
+}
+
+#personal-subtext a:hover {
+    color: #2962FF;
+    text-shadow:0px 0px .5px #424242;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#personal-subtext {
+    margin-top: -1%;
+}
+
+#personal-info {
+    float: left;
+    width: 50%;
+    margin-left: 7%;
+    margin-top: 2%;
+    font-size: 100%;
+    text-align: center;
+}
+
+.personal-text {   
+    position:relative;
+    left: 0; 
+    right: 0; 
+    top: 0;
+    bottom: 0;
+    margin-left: 5%; 
+    font-size: 24px; 
+    width: 100%;
+    color: #424242;
+}
+
+.personal-college ul {
+    overflow: hidden;
+    float:left;
+    width:57%;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.icon-row {
+    width: 25%;
+    float: left;
+    margin-left: 25%;
+    margin-top: 3%;
+}
+.icon-row img {
+    width: 15%;
+    margin-right: 3%;
+}
+.personal-college #profile-photo {
+    float:left;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 5%;
+    width: 30%;
+    border: 1px solid #616161;
+    transition: 200ms;
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(148,148,148,0.5);
+}
+
+
+
+
+
